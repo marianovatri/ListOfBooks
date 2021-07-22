@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,} from "react-router-dom";
 
 
 const App = () => {
 
- const [name, setName] = useState(null);
+ const [name, setName] = useState();
 
 useEffect(() => {
   fetch('https://fakerapi.it/api/v1/books')
@@ -16,10 +20,12 @@ useEffect(() => {
    []);
    
      return (
+      <Router>
     <div className="App">
       <header className="Lista">
-
-        <table>
+        <Switch>
+          <Route path="/books">
+          <table>
           <thead>
              <tr>
               <th>Author</th>
@@ -32,7 +38,9 @@ useEffect(() => {
             </tr>
           </thead> 
           <tbody>
-          {name.map(({author, description, genre, isbn, published, publisher,title}, index) => {
+            
+          {name.map(({author, description, genre, isbn,
+           published, publisher,title}, index) => {
 
 return (
   <tr>
@@ -50,10 +58,18 @@ return (
           </tbody>
         </table>
        
-      )
-     
+         </Route>
+
+
+         <Route path="/">
+        <h3> Pagina de inicio</h3>
+        
+         </Route>
+        </Switch>
         </header>
+        
     </div>
+    </Router>
   );
  }
 
