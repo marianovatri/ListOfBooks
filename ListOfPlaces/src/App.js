@@ -1,30 +1,27 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-//import datos from "./datos.json"
-
 
 
 const App = () => {
 
-  const [name, setName] = useState(null);
+ const [name, setName] = useState(null);
 
 useEffect(() => {
   fetch('https://fakerapi.it/api/v1/books')
   .then(res => res.json())
-  
-  .then(res => {
-    setName(res.data.name)
+    .then(res => {
+    setName(res.data)
     console.log(res.data)});
   },
    []);
-  
-    return (
+   
+     return (
     <div className="App">
       <header className="Lista">
 
         <table>
           <thead>
-            <tr>
+             <tr>
               <th>Author</th>
               <th>Description</th>
               <th>Genre</th>
@@ -35,20 +32,21 @@ useEffect(() => {
             </tr>
           </thead> 
           <tbody>
-         
-                            
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                                                 
-              </tr>
-                                                     
+          {name.map(({author, description, genre, isbn, published, publisher,title}, index) => {
 
+return (
+  <tr>
+    <td>{author}</td>
+    <td>{description}</td>
+    <td>{genre}</td>
+    <td>{isbn}</td>
+    <td>{published}</td>
+    <td>{publisher}</td>
+    <td>{title}</td>
+                           
+  </tr>
+) } ) } 
+            
           </tbody>
         </table>
        
