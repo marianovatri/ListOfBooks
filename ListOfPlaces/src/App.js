@@ -4,6 +4,8 @@ import Text from './Pages/Texts';
 import Books from './Pages/Books';
 import Navigation from './Pages/Navigation';
 import Companies from './Pages/Companies';
+import CreditCards from './Pages/CreditCards';
+import Addresses from './Pages/Addresses';
 
 
 
@@ -26,6 +28,11 @@ const App = () => {
         <Switch>
 
 
+        <Route path="/addresses">
+            
+            <Addresses/>
+
+          </Route>
 
 
           <Route path="/texts">
@@ -41,6 +48,12 @@ const App = () => {
             <Books/>
 
          </Route>
+
+         <Route path="/creditCards">
+        
+        <CreditCards/>
+
+     </Route>
 
          <Route path="/companies">
             

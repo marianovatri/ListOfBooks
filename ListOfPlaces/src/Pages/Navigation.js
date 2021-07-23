@@ -1,5 +1,5 @@
 import {
-   Navbar, Nav,  
+   Navbar, Nav, Button,
 } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
@@ -20,23 +20,16 @@ function Navigation () {
 
   <Navbar.Collapse id="basic-navbar-nav">
 
+  <Button>
     <Nav className="mr-auto">
 
-      <Link className="nav-link" to="./texts">Texts</Link>
+      <Link className="nav-link" to="./addresses">Addresses</Link>
       
       
     </Nav>
+  </Button>
 
-    
-    <Nav className="mr-auto">
-
-      
-     
-      <Link className="nav-link" to="./companies">Companies</Link>
-         
-    </Nav>
-    
-     
+  <Button>
     <Nav className="mr-auto">
 
       
@@ -44,6 +37,42 @@ function Navigation () {
       
          
     </Nav>
+    </Button>
+
+    <Button>
+    <Nav className="mr-auto">
+
+      
+     
+      <Link className="nav-link" to="./companies">Companies</Link>
+         
+    </Nav>
+    </Button>
+
+    <Button>
+    <Nav className="mr-auto">
+
+      <Link className="nav-link" to="./creditcards">Credit Cards</Link>
+      
+      
+    </Nav>
+  </Button>
+
+
+  <Button>
+    <Nav className="mr-auto">
+
+      <Link className="nav-link" to="./texts">Texts</Link>
+      
+      
+    </Nav>
+  </Button>
+
+   
+
+   
+    
+    
       
 
   </Navbar.Collapse>

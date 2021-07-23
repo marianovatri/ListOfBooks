@@ -3,6 +3,7 @@
 
 .Lista {
   text-align: center;
+  height:100%;
   background-color: #1a4cb1;
   min-height: 100vh;
   display: flex;
@@ -10,7 +11,9 @@
   color: rgb(255, 255, 255);
 }
 
+
 .Lista table {
+  text-align: center;
   width: 100%;
   border-collapse: collapse;
 }

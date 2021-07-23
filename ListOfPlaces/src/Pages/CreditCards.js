@@ -1,14 +1,16 @@
+
+
 import { useEffect, useState } from 'react';
 
 
 
 
-const Books = () => {
+const CreditCards = () => {
 
     const [name, setName] = useState([]);
    
    useEffect(() => {
-     fetch('https://fakerapi.it/api/v1/books')
+     fetch('https://fakerapi.it/api/v1/credit_cards')
      .then(res => res.json())
        .then(res => {
        setName(res.data)
@@ -28,29 +30,26 @@ const Books = () => {
              <table>
              <thead>
                 <tr>
-                 <th>Author</th>
-                 <th>Description</th>
-                 <th>Genre</th>
-                 <th>isbn</th>
-                 <th>Published</th>
-                 <th>Publisher</th>
-                 <th>Title</th>
+                 <th>Type</th>
+                 <th>Number</th>
+                 <th>Expiration</th>
+                 <th>Owner</th>
+                 
                </tr>
              </thead> 
              <tbody>
                
-             {name.map(({author, description, genre, isbn,
-              published, publisher,title}, index) => {
+             {name.map(({type, number, expiration, owner,
+              }, index) => {
    
    return (
      <tr>
-       <td>{author} </td>
-       <td>{description}</td>
-       <td>{genre}</td>
-       <td>{isbn}</td>
-       <td>{published}</td>
-       <td>{publisher}</td>
-       <td>{title}</td>
+       <td>{type}</td>
+       <td>{number}</td>
+       <td>{expiration}</td>
+       <td>{owner}</td>
+      
+       
                               
      </tr>
    ) } ) } 
@@ -70,5 +69,5 @@ const Books = () => {
      );
     }
    
-   export default Books;
+   export default CreditCards;
    
