@@ -39,12 +39,16 @@ const Books = () => {
              </thead> 
              <tbody>
                
-             {name.map(({author, description, genre, isbn,
+             {name.map(({image,author, description, genre, isbn,
               published, publisher,title}, index) => {
    
    return (
      <tr>
-       <td>{author} </td>
+       <td>
+         <div> {author} </div>
+        <div>  <img alt='author image'  className="Image" src={image}/> </div> 
+       </td>
+
        <td>{description}</td>
        <td>{genre}</td>
        <td>{isbn}</td>

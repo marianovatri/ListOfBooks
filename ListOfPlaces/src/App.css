@@ -11,7 +11,10 @@
   color: rgb(255, 255, 255);
 }
 
-
+.Image {
+  width:42px;
+  height:42px
+}
 .Lista table {
   text-align: center;
   width: 100%;
