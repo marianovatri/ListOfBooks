@@ -1,7 +1,9 @@
 import './App.css';
 import {BrowserRouter as Router,  Switch,  Route,} from "react-router-dom";
-import Text from './Texts';
-import Books from './Books';
+import Text from './Pages/Texts';
+import Books from './Pages/Books';
+import Navigation from './Pages/Navigation';
+import Companies from './Pages/Companies';
 
 
 
@@ -13,6 +15,8 @@ const App = () => {
 
     
       <Router>
+
+        <Navigation/>
         
     <div className="App">
 
@@ -20,6 +24,8 @@ const App = () => {
 
         
         <Switch>
+
+
 
 
           <Route path="/texts">
@@ -35,6 +41,12 @@ const App = () => {
             <Books/>
 
          </Route>
+
+         <Route path="/companies">
+            
+            <Companies/>
+
+          </Route>
 
 
        
