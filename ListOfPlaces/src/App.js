@@ -32,34 +32,34 @@ const App = () => {
             
             <Addresses/>
 
-          </Route>
+        </Route>
 
 
-          <Route path="/texts">
+        <Route path="/texts">
             
             <Text/>
 
-          </Route>
+        </Route>
           
 
 
-          <Route path="/books">
+        <Route path="/books">
         
             <Books/>
 
-         </Route>
+        </Route>
 
-         <Route path="/creditCards">
+        <Route path="/creditCards">
         
-        <CreditCards/>
+         <CreditCards/>
 
-     </Route>
+        </Route>
 
-         <Route path="/companies">
+        <Route path="/companies">
             
             <Companies/>
 
-          </Route>
+        </Route>
 
 
        

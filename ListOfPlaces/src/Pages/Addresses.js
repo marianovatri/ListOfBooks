@@ -59,8 +59,7 @@ const Addresses = () => {
        <td>{latitude}</td>
        <td>{longitude}</td>
 
-      
-       
+             
                               
      </tr>
    ) } ) } 

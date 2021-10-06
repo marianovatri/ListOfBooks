@@ -2,6 +2,7 @@ import {
    Navbar, Nav, Button,
 } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -13,9 +14,8 @@ function Navigation () {
         
         <>
 
-       
 
-  <Navbar className="mb-3" bg="dark" variant="ligth" expand="lg">
+<Navbar bg="dark" variant="dark">
   <Navbar.Brand href="/">Clear All</Navbar.Brand>
 
   <Navbar.Collapse id="basic-navbar-nav">
